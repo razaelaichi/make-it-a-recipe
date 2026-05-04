@@ -1,4 +1,4 @@
-## make-it-a-recipe :3
+## ★ make-it-a-recipe ★
 # Recipe Explainer Skill
 
 Sometimes, technical concepts and algorithms can be tough to wrap your head around. The Recipe Explainer is an AI prompt template designed to break down complex or abstract coding concepts by turning them into easy-to-follow cooking recipes.
@@ -39,6 +39,59 @@ Every response uses a strict structure:
 3. **Description:** A plain-language summary of what the "recipe" does.
 4. **Ingredients:** The inputs, variables, and constraints you need.
 5. **Instructions:** Step-by-step actions with clear reasoning attached to each step.
+
+## Example Usage
+
+**Prompt:** "use this skill and teach me insertion sort"
+
+**Answer:**
+
+### Sorting Stew (Insertion Sort)
+
+Yields: 1 sorted list | Prep time: O(n²) worst case
+
+**Description**
+
+This recipe takes an unsorted list and gradually builds a perfectly sorted dish by inserting each element into its correct position.
+
+**Ingredients**
+- 1 list of elements (array): The data you want to sort
+- 1 index pointer (i): Tracks the current element being inserted
+- 1 key element: The item currently being positioned correctly
+- 1 comparison pointer (j): Moves backward to find the right spot
+- Constraint: Elements before index i are always sorted
+
+**Step-by-Step Instructions**
+
+1. **Preheat the Sorted Section**
+   - **Action:** Assume the first element (index 0) is already sorted.
+   - **Reason:** A single element is always sorted, so this forms your starting base.
+
+2. **Pick the Next Ingredient**
+   - **Action:** Move to the next element (i = 1) and store it as the key.
+   - **Reason:** This is the element you will insert into the sorted portion.
+
+3. **Compare Backwards**
+   - **Action:** Set j = i - 1 and compare the key with elements before it.
+   - **Reason:** You need to find the correct position for the key in the sorted section.
+
+4. **Shift Larger Elements**
+   - **Action:** While j >= 0 and array[j] > key, shift array[j] one step to the right.
+   - **Reason:** This creates space for the key by moving bigger elements ahead.
+
+5. **Insert the Key**
+   - **Action:** Place the key at array[j + 1].
+   - **Reason:** This is the correct sorted position after shifting.
+
+6. **Repeat the Process**
+   - **Action:** Move to the next index (i++) and repeat steps 2–5.
+   - **Reason:** Each iteration expands the sorted portion until the whole list is sorted.
+
+**Chef’s Notes**
+- If the list is already sorted, this runs very fast: O(n).
+- Worst case happens when the list is reverse sorted: O(n²).
+- This algorithm is stable, meaning equal elements keep their original order.
+- It works well for small datasets or nearly sorted lists.
 
 ## License
 MIT
