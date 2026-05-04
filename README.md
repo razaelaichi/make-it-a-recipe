@@ -22,6 +22,8 @@ If you're using an AI assistant loaded with this skill, you can ask for an expla
 
 It can also just step in if you express confusion about a concept and it thinks an analogy would naturally help.
 
+> **Note:** While this prompt works with various AI models, it is best used with **Claude**, which is particularly strong at rigidly following the structural rules and maintaining the culinary metaphor.
+
 ## How the mapping is handled
 
 Behind the scenes, the skill translates programming concepts into cooking terms before writing out the explanation:
